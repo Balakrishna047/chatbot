@@ -1,7 +1,6 @@
 require('dotenv').config();
 
 const express = require('express');
-const cors = require('cors');
 const { v4: uuidv4 } = require('uuid');
 
 const app = express();
@@ -10,7 +9,6 @@ const BOT_RESPONSE_DELAY = process.env.BOT_RESPONSE_DELAY_MS || 1000;
 const BOT_NAME = process.env.BOT_NAME || 'Chat Assistant';
 
 // Middleware
-app.use(cors());
 app.use(express.json());
 
 // In-memory database (Replace with real database in production)
