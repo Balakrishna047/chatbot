@@ -1,7 +1,8 @@
 require('dotenv').config();
 
 const express = require('express');
-const { v4: uuidv4 } = require('uuid');
+const { v4: uuidv4 } = require('uuid'); // Changed from import to require
+
 
 const app = express();
 const PORT = process.env.PORT || 3000;
